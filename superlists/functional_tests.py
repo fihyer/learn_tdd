@@ -17,7 +17,8 @@ class NewVisitorTest(unittest.TestCase):
 
         # Edith has heard about a cool new online to-do app
         # She goes to check out its homepage
-        browser.get('http://localhost:8000')
+        self.browser.get('http://localhost:8000')
+        self.browser.implicitly_wait(10)
 
 
         #  assert 'Django' in browser.title
