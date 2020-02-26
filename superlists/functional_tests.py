@@ -56,7 +56,7 @@ class NewVisitorTest(unittest.TestCase):
         input_box = self.browser.find_element_by_id('id_new_item')
 
         # She enters "Use peacock feathers to make a fly"
-        input_box.send_keys('Buy peacock feathers')
+        input_box.send_keys('Use peacock feathers to make a fly')
         input_box.send_keys(Keys.ENTER)
         self.browser.implicitly_wait(1)
 

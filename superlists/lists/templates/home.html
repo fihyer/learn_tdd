@@ -12,11 +12,13 @@
       <input id="id_new_item" type="text" name="item_text" placeholder="Enter a to-do item">
     </form>
     <table id="id_list_table" summary="to-do list items">
+      {% for item in items %}
       <tr>
         <td>
-          1: {{ new_item_text }}
+          {{ forloop.counter }}: {{ item.text }}
         </td>
       </tr>
+      {% endfor %}
     </table>
   </body>
 </html>
