@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*- 
 #  from selenium.webdriver import Chrome
+from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 import time
 import unittest
 
-class NewVisitorTest(unittest.TestCase):
+class NewVisitorTest(LiveServerTestCase):
 
     def setUp(self):
         self.browser = webdriver.Chrome()
@@ -20,7 +21,7 @@ class NewVisitorTest(unittest.TestCase):
 
         # Edith has heard about a cool new online to-do app
         # She goes to check out its homepage
-        self.browser.get('http://localhost:8000')
+        self.browser.get(self.live_server_url)
         self.browser.implicitly_wait(10)
 
 

@@ -5,6 +5,9 @@ from django.template.loader import render_to_string
 from lists.views import home_page
 from lists.models import Item
 
+#@todo clean up after functional test runs
+#@todo support more than one list
+
 class HomePageTest(TestCase):
 
     def test_can_save_a_POST_request(self):

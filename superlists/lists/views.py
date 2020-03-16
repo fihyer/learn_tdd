@@ -10,7 +10,6 @@ def home_page(request):
         Item.objects.create(text=new_item_text)
         return redirect('/')
 
-    # @todo Support more than one list
     items = Item.objects.all()
     return render(request, 'home.html', {'items': items})
     
